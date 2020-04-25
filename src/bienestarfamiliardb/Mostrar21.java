@@ -18,7 +18,7 @@ public class Mostrar21 extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         SQLclass query = new SQLclass();
-        jTable1.setModel(query.query("select p.id, p.nombre from padre p left join hijo h on (h.hijode=p.id) where h.id is null", 2, 2));
+        jTable1.setModel(query.query("select p.id, p.nom from padre p left join hijo h on (h.hijode=p.id) where h.id is null", 2, 2));
     }
 
     /**

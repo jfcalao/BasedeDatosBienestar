@@ -285,7 +285,7 @@ String idTable,nomTable;
             id=null;
         }
         
-        String comand = "insert into padre (id,nombre) values (" + id + "," + nom + ")";
+        String comand = "insert into padre (id,nom) values (" + id + "," + nom + ")";
             System.out.println(comand);
         com.ejecutar(comand);
         padres.setModel(com.query("select * from padre", 2,2));
@@ -306,7 +306,7 @@ String idTable,nomTable;
                 id=null;
             }
             query.ejecutar(
-                    "update padre set id=" + id + ", nombre= " + nom+ " where id=" + idTable);
+                    "update padre set id=" + id + ", nom= " + nom+ " where id=" + idTable);
             System.out.println("Ejecutado ");
             //id="+idNew.getText()+",
             padres.setModel(query.query("select * from padre", 2,2));

@@ -22,6 +22,9 @@ public class SQLclass {
 
     public SQLclass() {
     }
+    BienestarFamiliarDB bf=new BienestarFamiliarDB();
+    
+    public String user=bf.uu, password=bf.pp;
     public Statement conn(){
         try {
             DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
@@ -30,7 +33,7 @@ public class SQLclass {
             //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
             //COMO SEGUNDO Y TERCER PARAMETRO SE DEBE PONER EL USUARIO Y CLAVE DE TU 
             //BASES DE DATOS PARA PODER ESTABLECER UNA CORRECTA CONEXION
-            Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","JFCALAOBF","sa123456");
+            Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE",user,password);
             //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             Statement statement= connection.createStatement();

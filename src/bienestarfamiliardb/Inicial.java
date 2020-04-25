@@ -18,12 +18,24 @@ public class Inicial extends javax.swing.JFrame {
     /**
      * Creates new form Inicial
      */
+    String user,password;
     public Inicial() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
         ImageIcon bienes = new ImageIcon(getClass().getResource("/images/bienestar familiar.png"));
         ImageIcon icono = new ImageIcon(bienes.getImage().getScaledInstance(jLabel4.getWidth(), jLabel4.getHeight(), Image.SCALE_DEFAULT));
         jLabel4.setIcon(icono);
+        
+        
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     /**

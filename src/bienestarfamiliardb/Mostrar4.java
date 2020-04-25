@@ -18,7 +18,7 @@ public class Mostrar4 extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         SQLclass query = new SQLclass();
-        jTable1.setModel(query.query("Select p.id, p.nombre, count(h.hijode) as numero_de_hijos from padre p left join hijo h on (p.id = h.hijode)group by p.id, p.nombre", 3, 1));
+        jTable1.setModel(query.query("Select p.id, p.nom, count(h.hijode) as numero_de_hijos from padre p left join hijo h on (p.id = h.hijode)group by p.id, p.nom", 3, 1));
     }
 
     /**
